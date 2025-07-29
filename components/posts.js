@@ -5,12 +5,27 @@ import LikeButton from "./like-icon";
 import { togglePostLikeStatus } from "@/actions/posts";
 import { useOptimistic } from "react";
 import { toggleLikeReducer } from "./toggle-like-reducer";
+import Image from "next/image";
+
+function imageLoader(config) {
+  const [urlStart, urlEnd] = config.src.split("/upload/");
+  const transformation = `w_200,q_${config.quality}`;
+
+  return `${urlStart}/upload/${transformation}/${urlEnd}`;
+}
 
 function Post({ post, action }) {
   return (
     <article className="post">
       <div className="post-image">
-        <img src={post.image} alt={post.title} />
+        <Image
+          loader={imageLoader}
+          src={post.image}
+          alt={post.title}
+          width={200}
+          height={120}
+          quality={50}
+        />
       </div>
       <div className="post-content">
         <header>
