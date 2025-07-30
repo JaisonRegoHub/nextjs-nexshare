@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 body {
@@ -129,12 +129,12 @@ main {
   background-color: #126e6d;
 }
 
-.form-actions button[type='reset'] {
+.form-actions button[type="reset"] {
   background-color: #233040;
   color: #bee9e8;
 }
 
-.form-actions button[type='reset']:hover {
+.form-actions button[type="reset"]:hover {
   color: #88cec9;
   background-color: #274357;
 }
@@ -164,6 +164,12 @@ main {
   border: 1px solid #27334d;
   background-color: #15202b;
   box-shadow: 0 0 7px #14213d33;
+}
+
+.post-image {
+  width: 8rem;
+  height: 6rem;
+  position: relative;
 }
 
 .post img {
